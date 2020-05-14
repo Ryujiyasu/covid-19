@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\Admin;
+use App\User;
 
 class TopContoroller extends Controller
 {
@@ -17,8 +18,10 @@ class TopContoroller extends Controller
     $value5=$request->get("test5");
     $value6=$request->get("test6");
     $value7=$request->get("test7");
+    $user=User::where('id',1)->get();
+    dd($user);
 
-    return view('welcome',compact("value","value2","value3","value4"));
+    return view('welcome',compact("user","value","value2","value3","value4"));
   }
   public function graph()
   {

@@ -8,6 +8,7 @@
 
 <button type="submit">sbmit</button>
 </form>
+{{$user->email}}
 {{$value}}
 {{$value2}}
 {{$value3}}
