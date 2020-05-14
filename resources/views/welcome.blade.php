@@ -1,7 +1,20 @@
 @extends('base')
 
 @section('content')
+<form>
+  <input type="text" name="test1">
+  <input type="checkbox" name="test2">
+  <input type="password" name="test3">
+
+<button type="submit">sbmit</button>
+</form>
+{{$value}}
+{{$value2}}
+{{$value3}}
+{{$value4}}
+
 <div class="container">
+
 <h1>Month Infected Graph</h1>
 </div>
 <div class="container">
