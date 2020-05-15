@@ -1,11 +1,9 @@
 @extends('base')
 
 @section('content')
-<form>
+<form method="POST">
+  @csrf
   <input type="text" name="test1">
-  <input type="checkbox" name="test2">
-  <input type="password" name="test3">
-
 <button type="submit">sbmit</button>
 </form>
 {{$user->email}}
