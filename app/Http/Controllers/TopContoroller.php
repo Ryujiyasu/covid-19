@@ -20,7 +20,7 @@ class TopContoroller extends Controller
     $value6=$request->get("test6");
     $value7=$request->get("test7");
     $user=User::find(1);
-    dd($request->method);
+
     if ($request->method == "POST"){
 
       $virus = new Virus();
