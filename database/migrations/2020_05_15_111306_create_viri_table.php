@@ -16,6 +16,10 @@ class CreateViriTable extends Migration
         Schema::create('viri', function (Blueprint $table) {
             $table->id();
             $table->string("name");
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')
+            ->references('id')->on('users')
+            ->onDelete('cascade');
             $table->timestamps();
         });
     }

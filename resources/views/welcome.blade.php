@@ -7,10 +7,9 @@
 <button type="submit">sbmit</button>
 </form>
 {{$user->email}}
-{{$value}}
-{{$value2}}
-{{$value3}}
-{{$value4}}
+@foreach ($user->viri() as $virus)
+  <li>{{$virus->name}}
+@endforeach
 
 <div class="container">
 

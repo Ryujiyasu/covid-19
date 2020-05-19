@@ -20,6 +20,7 @@ class TopContoroller extends Controller
     $value6=$request->get("test6");
     $value7=$request->get("test7");
     $user=User::find(1);
+    $virus = Virus::find(1);
 
     if ($request->method == "POST"){
 
@@ -31,7 +32,7 @@ class TopContoroller extends Controller
 
 
 
-    return view('welcome',compact("user","value","value2","value3","value4"));
+    return view('welcome',compact("user","virus","value","value2","value3","value4"));
   }
   public function post(Request $request)
   {
